@@ -5,7 +5,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
-@Mixin(ServerWorld.class)
+@Mixin(value = ServerWorld.class, priority = 1005)
 public class ServerWorldMixin {
 
     @ModifyConstant(method = "setSpawnPos", constant = @Constant(intValue = 11))
